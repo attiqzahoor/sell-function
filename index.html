@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Inscription</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/@mempool/mempool.js"></script> 
+</head>
+<body>
+    <button id="sellButton">Sell</button>
+
+    <!-- Sell Page Modal -->
+    <div id="sellPage" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Enter Inscription ID</h2>
+            <input type="text" id="inscriptionId" placeholder="Inscription ID">
+            <button id="searchButton">Search</button>
+
+            <!-- Section to display fetched data -->
+            <div id="inscriptionData" style="display: none;">
+                <h3>Inscription Details</h3>
+                <p>Inscription ID: <span id="inscriptionIdDisplay"></span></p>
+                <p>Height: <span id="heightDisplay"></span></p>
+                <p>Content Type: <span id="contentTypeDisplay"></span></p>
+                <p>Inscription Number: <span id="inscriptionNumberDisplay"></span></p>
+                <p>Address: <span id="addressDisplay"></span></p>
+
+                <h3>Set Price and Fees</h3>
+                <input type="text" id="price" placeholder="Price in BTC">
+                <div id="result"></div>
+                <form id="feeRateForm">
+                    <textarea id="feeRate" rows="10" cols="50"></textarea>
+                </form>
+                <button id="publishButton">Publish</button>
+                <p>Total Bytes: <span id="totalBytesDisplay"></span></p>
+                <p id="estimatedFeeDisplay">Estimated Fee: N/A</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
